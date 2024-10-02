@@ -1,20 +1,7 @@
 package music;
 import java.util.*;
 
-/**
- * This class is designed to run student implemented methods from the 
- * Library class in the console.
- * 
- * @author Jeremy Hui
- * @author Vian Miranda
- */
-
 public class Driver {
-    /**
-     * NOTE TO STUDENTS: This is the seed which the Driver uses when shuffling 
-     * your playlist. Feel free to change the seed to your choice, but remember 
-     * that changing the seed will result in different outputs.
-     */
     private final static int SEED = 2023;
 
     private static PlaylistLibrary songLibrary;

@@ -1,13 +1,5 @@
 package music;
 
-/**
- * This class represents a song, with a string for the song name, artist, 
- * album, and year
- * 
- * @author Jeremy Hui
- * @author Vian Miranda
- */
-
 public class Song {
     private String          songName;
     private String          artist;
@@ -16,9 +8,6 @@ public class Song {
     private String          link;
     private final String    DIRECTORY = "songs/";
 
-    /*
-     * Constructor
-     */
     public Song(String songName, String artist, int year, int popularity, String link) {
         this.songName = songName;
         this.artist = artist;
@@ -27,9 +16,7 @@ public class Song {
         this.link = DIRECTORY + year + "/" + link;
     }
 
-    /*
-     * Constructor with link of the song set to null
-     */
+
     public Song(String songName, String artist, int year, int popularity) {
         this.songName = songName;
         this.artist = artist;
@@ -38,16 +25,12 @@ public class Song {
         this.link = null;
     }
 
-    /*
-     * Default constructor initializes year and popularity to 0  
-     */
+
     public Song() {
         this(null, null, 0, 0, null);
     }
 
-    /*
-     * Prints the Song object
-     */
+
     @Override
     public String toString() {
         StringBuilder printSong = new StringBuilder();
@@ -56,9 +39,7 @@ public class Song {
         return printSong.toString();
     }
 
-    /*
-     * HashCode method
-     */
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -70,9 +51,7 @@ public class Song {
         return result;
     }
 
-    /*
-     * Equals method (used for removeSong())
-     */
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -99,7 +78,6 @@ public class Song {
         return true;
     }
 
-    /* Getter and setter methods */
     public String getSongName() { return songName; }
     public void setSongName(String s) { songName = s; }
 
